@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b1120;
+    color: #e2e8f0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Navigation */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e293b;
+    background: #0f172a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.logo-icon {
+    background: #2563eb;
+    padding: 8px 13px;
+    border-radius: 9px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.save-status {
+    color: #4ade80;
+    font-size: 13px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 17px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.download-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Main layout */
+
+.container {
+    max-width: 1250px;
+    margin: 55px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 290px;
+    gap: 35px;
+}
+
+.document-header {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: #60a5fa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Toolbar */
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    background: #111c30;
+    border: 1px solid #26334a;
+    border-radius: 12px 12px 0 0;
+}
+
+.toolbar button {
+    background: #1e293b;
+    color: #cbd5e1;
+}
+
+.toolbar button:hover {
+    background: #334155;
+}
+
+.toolbar-divider {
+    height: 25px;
+    width: 1px;
+    background: #334155;
+    margin: 0 5px;
+}
+
+/* Editor */
+
+.editor-card {
+    background: #111c30;
+    border: 1px solid #26334a;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+
+#editor {
+    display: block;
+    width: 100%;
+    height: 430px;
+    padding: 25px;
+    background: transparent;
+    color: #e2e8f0;
+    border: none;
+    outline: none;
+    resize: vertical;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+#editor::placeholder {
+    color: #64748b;
+}
+
+.editor-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 22px;
+    border-top: 1px solid #26334a;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* History panel */
+
+.history-section {
+    padding-top: 5px;
+}
+
+.history-heading {
+    margin-bottom: 25px;
+}
+
+.history-heading h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.history-heading p,
+.empty-message {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.history-card,
+.info-card {
+    background: #111c30;
+    border: 1px solid #26334a;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.history-card h3 {
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.history-list {
+    color: #94a3b8;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.info-card span {
+    color: #60a5fa;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.info-card h3 {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.info-card p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* Footer */
+
+footer {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    border-top: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    footer {
+        padding: 20px;
+        margin: 20px;
+    }
+}

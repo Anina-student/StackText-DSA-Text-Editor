@@ -1,0 +1,10 @@
+
+# Emscripten SDK installation
+/emsdk/
+
+# Compiled Windows executables
+*.exe
+
+# Temporary test document
+/document.txt
+
