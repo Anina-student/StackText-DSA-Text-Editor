@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackText | Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <span>StackText</span>
+        </div>
+
+        <div class="nav-right">
+            <span class="save-status">● Ready</span>
+            <button class="download-btn" id="downloadBtn">
+                Download
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="editor-section">
+
+            <div class="document-header">
+                <div>
+                    <p class="eyebrow">MY WORKSPACE</p>
+                    <h1>Untitled Document</h1>
+                    <p class="subtitle">A simple space for your thoughts.</p>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <button id="undoBtn">↶ Undo</button>
+                <button id="redoBtn">↷ Redo</button>
+                <span class="toolbar-divider"></span>
+                <button id="clearBtn">Clear</button>
+            </div>
+
+            <div class="editor-card">
+                <textarea
+                    id="editor"
+                    placeholder="Start writing something amazing..."
+                    spellcheck="false"
+                ></textarea>
+
+                <div class="editor-footer">
+                    <span id="wordCount">0 words</span>
+                    <span id="charCount">0 characters</span>
+                </div>
+            </div>
+
+        </section>
+
+        <aside class="history-section">
+
+            <div class="history-heading">
+                <h2>Edit History</h2>
+                <p>Track your document changes.</p>
+            </div>
+
+            <div class="history-card">
+                <h3>↶ Undo History</h3>
+                <div id="undoHistory" class="history-list">
+                    <p class="empty-message">No previous changes yet.</p>
+                </div>
+            </div>
+
+            <div class="history-card">
+                <h3>↷ Redo History</h3>
+                <div id="redoHistory" class="history-list">
+                    <p class="empty-message">No restored changes yet.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <span>POWERED BY</span>
+                <h3>C + WebAssembly</h3>
+                <p>Stack-based text editing.</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <span>StackText © 2026</span>
+        <span>Built with C and WebAssembly</span>
+    </footer>
+
+   <script src="stacktext.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
